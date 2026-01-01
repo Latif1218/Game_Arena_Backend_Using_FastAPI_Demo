@@ -14,3 +14,4 @@ cuid2
 python-jose
 email-validator
 alembic
+redis
