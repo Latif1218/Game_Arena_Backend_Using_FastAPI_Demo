@@ -22,7 +22,8 @@ class User(Base):
     role = Column(String, default="user")
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     
-    
+    wallet = relationship("Wallet", back_populates="owner", uselist=False)
+    transactions = relationship("Transaction", back_populates="user")
     
 class PasswordResetCode(Base):
     __tablename__ = "password_reset_codes"
