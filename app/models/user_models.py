@@ -24,6 +24,7 @@ class User(Base):
     
     wallet = relationship("Wallet", back_populates="owner", uselist=False)
     transactions = relationship("Transaction", back_populates="user")
+    match_participants = relationship("MatchParticipant", back_populates="user")
     
 class PasswordResetCode(Base):
     __tablename__ = "password_reset_codes"
