@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, Enum, ForeignKey, Float, String, Text, D
 from ..database import Base
 from sqlalchemy.orm import relationship
 from cuid2 import Cuid
-import datetime
 import enum
 
 cuid = Cuid()

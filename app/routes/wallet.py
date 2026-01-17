@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 from typing import List
-from ..models import user_models, user_wallet_models, user_transaction_models
-from ..schemas import user_schemas, user_wallet_schemas, user_transaction_schemas
+from ..models import user_models, user_transaction_models
+from ..schemas import user_wallet_schemas, user_transaction_schemas
 from ..Authentication import user_auth
 from ..Wallet_helper import wallet_helper
 from ..database import get_db

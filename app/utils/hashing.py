@@ -1,5 +1,4 @@
 from pwdlib import PasswordHash
-from ..schemas import user_schemas
 
 
 password_hash = PasswordHash.recommended()

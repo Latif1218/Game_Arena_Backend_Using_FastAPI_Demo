@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
 from ..models import user_wallet_models, user_transaction_models
-from ..schemas import user_transaction_schemas
 
 
 def get_user_wallet(db:Session, user_id: int):

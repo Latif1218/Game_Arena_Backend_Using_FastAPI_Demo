@@ -1,6 +1,6 @@
-from fastapi import APIRouter, Depends, status, HTTPException
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
-from ..models import user_models, user_match_models
+from ..models import user_models
 from ..schemas import user_match_schemas
 from ..database import get_db
 from ..Authentication import user_auth

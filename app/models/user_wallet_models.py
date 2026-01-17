@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Float, DateTime, fun
 from ..database import Base
 from sqlalchemy.orm import relationship
 from cuid2 import Cuid
-import datetime
 
 cuid = Cuid()
 
