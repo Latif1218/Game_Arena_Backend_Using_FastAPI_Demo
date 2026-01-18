@@ -69,7 +69,7 @@ def get_current_user(
 
 
 def get_current_active_user(
-    current_user: Annotated[user_schemas.User, Depends(get_current_user)],
+    current_user: Annotated[user_models.User, Depends(get_current_user)],
 ):
     if current_user.disabled:
         raise HTTPException(
