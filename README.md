@@ -48,23 +48,23 @@ GameArena_Backend/
 │   │   ├── user.py
 │   │   └── wallet.py
 │   │
-│   └── schemas/                    # Pydantic models (request/response)
-│       ├── init.py
-│       ├── user_match_schemas.py
-│       ├── user_schemas.py
-│       ├── user_transaction_schemas.py
-│       └── user_wallet_schemas.py
-│
-├── utils/
-│   ├── init.py
-│   ├── config.py                   # settings, env variables
-│   └── database.py                 # engine, session, get_db dependency
-│
+│   ├── schemas/                    # Pydantic models (request/response)
+│   |   ├── init.py
+│   |   ├── user_match_schemas.py
+│   |   ├── user_schemas.py
+│   |   ├── user_transaction_schemas.py
+│   |   └── user_wallet_schemas.py
+│   |
+|   └──  utils/
+|        ├──init.py
+│        ├── config.py
+│        ├── database.py                    # settings, env variables
+│        └── main.py                        # engine, session, get_db dependency
+│                                           # FastAPI app entry point
 ├── .gitignore
 ├── alembic.ini
 ├── config.py                       # (sometimes placed in root)
-├── database.py                     # (sometimes placed in root)
-├── main.py                         # FastAPI app entry point
+├── database.py                     # (sometimes placed in root)                       
 ├── requirements.txt
 ├── LICENSE
 └── README.md
