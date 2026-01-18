@@ -9,14 +9,65 @@ This demo project demonstrates how to structure and build a game-related backend
 
 ```
 
-Game_Arena_Backend_Using_FastAPI_Demo/
-├── alembic/                 # Database migration scripts
-├── app/                     # FastAPI application code
-├── .gitignore               # Git ignore rules
-├── LICENSE                  # MIT License file
-├── README.md                # Project documentation
-├── alembic.ini              # Alembic database config
-└── requirements.txt         # Python dependencies
+GameArena_Backend/
+├── alembic/                        # Database migrations (Alembic)
+│   ├── env.py
+│   ├── script.py.mako
+│   └── versions/                   # migration files
+│
+├── app/
+│   ├── init.py
+│   │
+│   ├── Authentication/             # auth logic + jwt / password handling
+│   │   ├── init.py
+│   │   └── user_auth.py
+│   │
+│   ├── Match_helper/               # matchmaking business logic
+│   │   ├── init.py
+│   │   └── match_helper.py
+│   │
+│   ├── Wallet_helper/              # wallet, balance, transaction logic
+│   │   ├── init.py
+│   │   └── wallet_helper.py
+│   │
+│   ├── models/                     # SQLAlchemy ORM models
+│   │   ├── init.py
+│   │   ├── _match_models.py
+│   │   ├── user_match_model.py
+│   │   ├── user_models.py
+│   │   ├── user_participant_model.py
+│   │   ├── user_transaction_models.py
+│   │   └── user_wallet_models.py
+│   │
+│   ├── routes/                     # API endpoints (routers)
+│   │   ├── init.py
+│   │   ├── admin.py
+│   │   ├── forgot.py               # password reset?
+│   │   ├── matches.py
+│   │   ├── register_user.py
+│   │   ├── user.py
+│   │   └── wallet.py
+│   │
+│   └── schemas/                    # Pydantic models (request/response)
+│       ├── init.py
+│       ├── user_match_schemas.py
+│       ├── user_schemas.py
+│       ├── user_transaction_schemas.py
+│       └── user_wallet_schemas.py
+│
+├── utils/
+│   ├── init.py
+│   ├── config.py                   # settings, env variables
+│   └── database.py                 # engine, session, get_db dependency
+│
+├── .gitignore
+├── alembic.ini
+├── config.py                       # (sometimes placed in root)
+├── database.py                     # (sometimes placed in root)
+├── main.py                         # FastAPI app entry point
+├── requirements.txt
+├── LICENSE
+└── README.md
 
 ````
 
